@@ -3,17 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Footivso Official Store</title>
     <link rel="stylesheet" href="madrid.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        /* quick fixes for missing styles in madrid.css (ensures layout safety) */
+        .product-container, .product-container-2 {
+            scroll-behavior: smooth;
+            overflow-x: auto;
+            scrollbar-width: thin;
+        }
+        .products, .products-2 {
+            display: flex;
+            gap: 1.5rem;
+            padding: 0.5rem 0;
+        }
+        .section-2, .section-3 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        button#scroll-left, button#scroll-right, button#scroll-left-1, button#scroll-right-1 {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+            padding: 0.6rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .main-section-2, .main-section-3 {
+            margin: 2rem 0;
+        }
+        .footer-all-smalls-icons img {
+            height: 30px;
+            margin: 0 4px;
+        }
+        .footer-icon-links img {
+            height: 32px;
+            margin: 0 6px;
+        }
+        .footer-social-media-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .all-footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .footer-left-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .payments-links img {
+            height: 28px;
+            margin: 0 4px;
+        }
+        @media (max-width: 768px) {
+            .all-footer-links { flex-direction: column; }
+            .footer-social-media-links { flex-direction: column; gap: 1rem; }
+        }
+    </style>
 </head>
 <body>
+    <!-- Navbar -->
     <nav>
         <div class="container">
             <div class="main-nav">
                 <div class="left-links">
-                <a href="index.html"><img src="footivso (3).png" alt="" height="120px"></a>
-                <h2>Official Store</h2>
+                    <a href="index.html"><img src="team-images/footivso (3).png" alt="Footivso Logo" height="120px"></a>
+                    <h2>Official Store</h2>
                 </div>
                 <div class="search-bar">
                     <span class="material-symbols-outlined">search</span>
@@ -28,246 +90,263 @@
         </div>
     </nav>
     
-   <!-- ................................................section-1........................................................... -->
-   <section>
-    <div class="gradient-overlay"></div>
-    <div class="container-section-1">
-        <div class="haider-section-1">
-            <div class="word-on-top-1">
-                <div class="under-h1">
-                    <h1>New</h1>
-                    <h1>Home Kit</h1>
-                    <h1>24/25</h1>
-                </div>
-                <div class="under-h2">
-                    <h4>!Hala Madrid y nada mas!</h4>
-                    <a href="#"><h5>Shop now</h5></a> 
+    <!-- Section 1: Hero -->
+    <section>
+        <div class="gradient-overlay"></div>
+        <div class="container-section-1">
+            <div class="haider-section-1">
+                <div class="word-on-top-1">
+                    <div class="under-h1">
+                        <h1>New</h1>
+                        <h1>Home Kit</h1>
+                        <h1>24/25</h1>
+                    </div>
+                    <div class="under-h2">
+                        <h4>!Hala Madrid y nada mas!</h4>
+                        <a href="#"><h5>Shop now</h5></a> 
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-   </section>
-   <!-- .................................................section-2..................................................... -->
-   <div class="main-section-2">
-    <div class="section-2-between-word">
-        <h2>Trending now</h2>
-        <h1>Home kit 24/25</h1>
-    </div>
-   <div class="section-2">
-    <button id="scroll-left"><span class="material-symbols-outlined">arrow_back</span></button>
-    <div class="product-container">
-        <div class="products">
-            <div class="product-1"><a href="addtocard.html"><img src="./team-images/madrid-kit1.webp" alt="" height="280px"></a><a href="#"><h1>Mens Home Authentic Shirt 24/25</h1></a><h2>Ksh.18,000</h2></div>
-            <div class="product-2"><a href="#"><img src="/team-images/madrid-kit2.webp" alt=""height="280px"></a><a href="#"><h1>Mens Home Shirt 24/25 White</h1></a><h2>Ksh.15,000</h2></div>
-            <div class="product-3"><a href="#"><img src="/team-images/madrid-kit4.webp" alt=""height="280px"></a><a href="#"><h1>Mens Home Long Sleeve 24/25</h1></a><h2>Ksh.20,000</h2></div>
-            <div class="product-4"><a href="#"><img src="/team-images/madrid-kit5.webp" alt=""height="280px"></a><a href="#"><h1>Youth Home Kit 24/25 White</h1></a><h2>Ksh.15,000</h2></div>
-            <div class="product-5"><a href="#"><img src="/team-images/madrid-short.webp" alt=""height="280px"></a><a href="#"><h1>Mens Home Authentic Shorts</h1></a><h2>Ksh.8,000</h2></div>
-            <div class="product-6"><a href="#"><img src="/team-images/Real-Madrid-Short-2.jpg" alt=""height="280px"></a><a href="#"><h1>Youth Home Shorts 24/25</h1></a><h2>Ksh.9,000</h2></div>
-        </div>
-    </div>
-    <button id="scroll-right"><span class="material-symbols-outlined">arrow_forward</span></button>
-    <script>
-        document.getElementById("scroll-left").addEventListener("click", function() {
-            document.querySelector(".product-container").scrollBy({
-                left: -1200,
-                behavior: "smooth"
-            });
-        });
-        document.getElementById("scroll-right").addEventListener("click", function(){
-            document.querySelector(".product-container").scrollBy({
-                left: 1200,
-                behavior: "smooth"
-            });
-        });
-    </script>
-   </div>
-</div>
-<!-- ...............................................section-3...................................................................... -->
-<div class="main-section-3">
-    <div class="section-3-between-word">
-        <h1>DNA</h1>
-    </div>
-   <div class="section-3">
-    <button id="scroll-left-1"><span class="material-symbols-outlined">arrow_back</span></button>
-    <div class="product-container-2">
-        <div class="products-2">
-            <div class="product-7"><a href="#"><img src="/team-images/dna-kit1.webp" alt="" height="280px"></a><a href="#"><h1>Mens Home Authentic Shirt 24/25</h1></a><h2>Ksh.18,000</h2></div>
-            <div class="product-8"><a href="#"><img src="/team-images/dan-kit2.webp" alt=""height="280px"></a><a href="#"><h1>Mens Home Shirt 24/25 White</h1></a><h2>Ksh.15,000</h2></div>
-            <div class="product-9"><a href="#"><img src="/team-images/DAN-kit3.webp" alt=""height="280px"></a><a href="#"><h1>Mens Home Long Sleeve 24/25</h1></a><h2>Ksh.20,000</h2></div>
-            <div class="product-10"><a href="#"><img src="/team-images/DAN-kit4.webp" alt=""height="280px"></a><a href="#"><h1>Youth Home Kit 24/25 White</h1></a><h2>Ksh.15,000</h2></div>
-            <div class="product-11"><a href="#"><img src="/team-images/DAN-kit5.webp" alt=""height="280px"></a><a href="#"><h1>Mens Home Authentic Shorts</h1></a><h2>Ksh.8,000</h2></div>
-            <div class="product-12"><a href="#"><img src="/team-images/DAN-kit6.webp" alt=""height="280px"></a><a href="#"><h1>Youth Home Shorts 24/25</h1></a><h2>Ksh.9,000</h2></div>
-        </div>
-    </div>
-    <button id="scroll-right-1"><span class="material-symbols-outlined">arrow_forward</span></button>
-    <script>
-        document.getElementById("scroll-left-1").addEventListener("click", function() {
-            document.querySelector(".product-container-2").scrollBy({
-                left: -7200,
-                behavior: "smooth"
-            });
-        });
-        document.getElementById("scroll-right-1").addEventListener("click", function(){
-            document.querySelector(".product-container-2").scrollBy({
-                left: 1200,
-                behavior: "smooth"
-            });
-        });
-    </script>
-   </div>
-</div>
-<!-- ................................................section-4.................................................. -->
-<div class="container-section-4">
-<div class="image-container">
-    <img id="mainImage" src="/team-images/DAN-Kit6.webp" alt="Image 1">
-  </div>
-  <div class="all-main-links">
-  <div class="links-container-1">
-    <h1>Choose Your Gear</h1>
-    <a href="#" id="changeImageLink-1">Mens Home Long Sleeve </a>
-    <a href="#" id="changeImageLink-2">Mens adidas Pants 24/25</a>
-    <a href="#" id="changeImageLink-3">Mens adidas Shorts 24/25</a>
-    <a href="#" id="changeImageLink-4">Mens adidas Hoodie 24/25</a>
-    <a href="#" id="changeImageLink-5">Mens adidas T-Shirt 24/25</a>
-  </div>
-  <div class="links-container-2">
-    <a href="#" id="changeImageLink-6">Mens ULC Champioms polo </a>
-    <a href="#" id="changeImageLink-7">Mens adidas Shorts 24/25</a>
-    <a href="#" id="changeImageLink-8">adidas Mens A por La 15</a>
-    <a href="#" id="changeImageLink-9">adidas Champions 15 cap</a>
-    <a href="#" id="changeImageLink-10">Mens Home Long Sleeve </a>
-  </div>
-</div>
- <script>
-  document.getElementById('changeImageLink-1').addEventListener('click', function(event) {
-  event.preventDefault(); 
-  changeImage('team-images/DAN-Kit3.webp');
-});
-document.getElementById('changeImageLink-2').addEventListener('click', function(event) {
-  event.preventDefault(); 
-  changeImage('team-images/DAN-Kit2.webp');
-});
-document.getElementById('changeImageLink-3').addEventListener('click', function(event) {
-  event.preventDefault(); 
-  changeImage('team-images/DAN-Kit4.webp');
-});
-document.getElementById('changeImageLink-4').addEventListener('click', function(event) {
-  event.preventDefault(); 
-  changeImage('team-images/DAN-Kit5.webp');
-});
-document.getElementById('changeImageLink-5').addEventListener('click', function(event) {
-  event.preventDefault();
-  changeImage('team-images/DAN-Kit9.webp');
-});
-document.getElementById('changeImageLink-6').addEventListener('click', function(event) {
-  event.preventDefault();
-  changeImage('team-images/DAN-Kit8.webp');
-});
-document.getElementById('changeImageLink-7').addEventListener('click', function(event) {
-  event.preventDefault();
-  changeImage('team-images/madrid-short.webp');
-});
-document.getElementById('changeImageLink-8').addEventListener('click', function(event) {
-  event.preventDefault();
-  changeImage('team-images/echarpe.webp');
-});
-document.getElementById('changeImageLink-9').addEventListener('click', function(event) {
-  event.preventDefault();
-  changeImage('team-images/DAN-Kit10.webp');
-});
-document.getElementById('changeImageLink-10').addEventListener('click', function(event) {
-  event.preventDefault();
-  changeImage('team-images/echarper-2.webp');
-});
+    </section>
 
-function changeImage(newSrc) {
-  var image = document.getElementById('mainImage');
-  image.src = newSrc;
-}
- </script>
- </div>
- <!-- ...............................................section-5...................................................................-->
-  <div class="section-5">
-    <div class="section-5-container">
-        <div class="section-5-advert">
-            <img src="/team-images/vinicius.webp" alt="" height="450px">
-            <h2>Become Premium and join the Footivso Community</h2>
+    <!-- Section 2: Trending (scrollable products) -->
+    <div class="main-section-2">
+        <div class="section-2-between-word">
+            <h2>Trending now</h2>
+            <h1>Home kit 24/25</h1>
+        </div>
+        <div class="section-2">
+            <button id="scroll-left" aria-label="Scroll left"><span class="material-symbols-outlined">arrow_back</span></button>
+            <div class="product-container">
+                <div class="products">
+                    <div class="product-1"><a href="addtocard.html"><img src="team-images/madrid-kit1.webp" alt="Mens Home Authentic Shirt" height="280px"></a><a href="#"><h1>Mens Home Authentic Shirt 24/25</h1></a><h2>Ksh.18,000</h2></div>
+                    <div class="product-2"><a href="#"><img src="team-images/madrid-kit2.webp" alt="Mens Home Shirt" height="280px"></a><a href="#"><h1>Mens Home Shirt 24/25 White</h1></a><h2>Ksh.15,000</h2></div>
+                    <div class="product-3"><a href="#"><img src="team-images/madrid-kit4.webp" alt="Long Sleeve Kit" height="280px"></a><a href="#"><h1>Mens Home Long Sleeve 24/25</h1></a><h2>Ksh.20,000</h2></div>
+                    <div class="product-4"><a href="#"><img src="team-images/madrid-kit5.webp" alt="Youth Home Kit" height="280px"></a><a href="#"><h1>Youth Home Kit 24/25 White</h1></a><h2>Ksh.15,000</h2></div>
+                    <div class="product-5"><a href="#"><img src="team-images/madrid-short.webp" alt="Authentic Shorts" height="280px"></a><a href="#"><h1>Mens Home Authentic Shorts</h1></a><h2>Ksh.8,000</h2></div>
+                    <div class="product-6"><a href="#"><img src="team-images/Real-Madrid-Short-2.jpg" alt="Youth Shorts" height="280px"></a><a href="#"><h1>Youth Home Shorts 24/25</h1></a><h2>Ksh.9,000</h2></div>
+                </div>
+            </div>
+            <button id="scroll-right" aria-label="Scroll right"><span class="material-symbols-outlined">arrow_forward</span></button>
         </div>
     </div>
-  </div>
-<!-- ................................................footer................................................................................ -->
- <div class="footer">
-    <div class="footer-container">
-        <div class="all-footer-links">
-        <div class="footer-left-links">
-            <div class="footer-link-1">
-                <h1>Shop</h1>
-                <a href="#"><h2>How TO Order</h2></a>
-                <a href="#"><h2>Shipping & Returns</h2></a>
-                <a href="#"><h2>Track my Order</h2></a>
-                <a href="#"><h2>My Account</h2></a>
-                <a href="#"><h2>Shop Locator</h2></a>
-            </div>
-            <div class="footer-link-2">
-                <h1>About</h1>
-                <a href="#"><h2>Privacy Policy</h2></a>
-                <a href="#"><h2>Cookie Policy</h2></a>
-                <a href="#"><h2>Terms & Conditions</h2></a>
-            </div>
-            <div class="footer-link-3">
-                <h1>Do You Need Help?</h1>
-                <a href="#"><h2>Contact Us</h2></a>
-                <a href="#"><h2>FAQS</h2></a>
-            </div>
-         </div>
-         <div class="footer-right-links">
-            <div class="footer-link-4">
-                <h1>Become a Footivso Member</h1>
-                <h1>Sign up and receive 5% off your first purchase</h1>
-                <button><h2>Sign up now</h2></button>
-            </div>
+
+    <!-- Section 3: DNA (scrollable) -->
+    <div class="main-section-3">
+        <div class="section-3-between-word">
+            <h1>DNA</h1>
         </div>
-        </div>
-        <div class="footer-middle-links">
-            <div class="footer-download-link"><h1>Download the app now</h1></div>
-            <div class="footer-icon-links">
-                <img src="./team-images/apple-logo.svg" alt="">
-                <img src="./team-images/play.svg" alt="">
-                <img src="./team-images/Huawei-icon.webp" alt="">
+        <div class="section-3">
+            <button id="scroll-left-1" aria-label="Scroll left DNA"><span class="material-symbols-outlined">arrow_back</span></button>
+            <div class="product-container-2">
+                <div class="products-2">
+                    <div class="product-7"><a href="#"><img src="team-images/dna-kit1.webp" alt="DNA Kit 1" height="280px"></a><a href="#"><h1>Mens DNA Authentic Shirt</h1></a><h2>Ksh.18,000</h2></div>
+                    <div class="product-8"><a href="#"><img src="team-images/dan-kit2.webp" alt="DNA Kit 2" height="280px"></a><a href="#"><h1>Mens DNA White Edition</h1></a><h2>Ksh.15,000</h2></div>
+                    <div class="product-9"><a href="#"><img src="team-images/DAN-kit3.webp" alt="DNA Long Sleeve" height="280px"></a><a href="#"><h1>DNA Long Sleeve Edition</h1></a><h2>Ksh.20,000</h2></div>
+                    <div class="product-10"><a href="#"><img src="team-images/DAN-kit4.webp" alt="Youth DNA Kit" height="280px"></a><a href="#"><h1>Youth DNA Kit 24/25</h1></a><h2>Ksh.15,000</h2></div>
+                    <div class="product-11"><a href="#"><img src="team-images/DAN-kit5.webp" alt="DNA Shorts" height="280px"></a><a href="#"><h1>DNA Authentic Shorts</h1></a><h2>Ksh.8,000</h2></div>
+                    <div class="product-12"><a href="#"><img src="team-images/DAN-kit6.webp" alt="DNA Youth Shorts" height="280px"></a><a href="#"><h1>DNA Youth Shorts</h1></a><h2>Ksh.9,000</h2></div>
+                </div>
             </div>
-        </div>
-        <div class="payments-links">
-            <h2>Payments Accepted</h2>
-            <div class="footer-all-smalls-icons">
-                <img src="/team-images/amex-first-icon.svg" alt="">
-                <img src="/team-images/applePay-second-icon.svg" alt="">
-                <img src="/team-images/dinersClub-third-icon.svg" alt="">
-                <img src="./team-images/discover-fourth-icon.svg" alt="">
-                <img src="/team-images/googlePay.5-icon.svg" alt="">
-                <img src="/team-images/maestro-6-ic0n.svg" alt="">
-                <img src="/team-images/mastercard-7-icon.svg" alt="">
-                <img src="/team-images/unionPay-8-icon.svg" alt="">
-                <img src="/team-images/visa-9-icon.svg" alt="">
-            </div>
-        </div>
-        <div class="footer-social-media-links">
-            <div class="social-media-left-links">
-                <img src="footivso (3).png" alt="" height="70px">
-            </div>
-            <div class="social-media-right-links">
-                <a href="#"><img src="/team-images/X-icon.svg" alt=""></a>
-                <a href="#"><img src="/team-images/Facebook-icon.svg" alt=""></a>
-                <a href="#"><img src="/team-images/instagram-icon.svg" alt=""></a>
-                <a href="#"><img src="/team-images/snap-icon.svg" alt=""></a>
-                <a href="#"><img src="/team-images/tiktok-icon.svg" alt=""></a>
-                <a href="#"><img src="/team-images/youtube-icon.svg" alt=""></a>
-                <a href="#"><img src="/team-images/twich-icon.svg" alt=""></a>
-            </div>
-        </div>
-        <div class="footer-last-word">
-            <h2>FOOTIVSO Shop © 2024 All Rights Reserved</h2>
+            <button id="scroll-right-1" aria-label="Scroll right DNA"><span class="material-symbols-outlined">arrow_forward</span></button>
         </div>
     </div>
- </div>
+
+    <!-- Section 4: Interactive Image Gallery with 10 links (fixed paths + loop) -->
+    <div class="container-section-4">
+        <div class="image-container">
+            <img id="mainImage" src="team-images/DAN-Kit6.webp" alt="Featured Product">
+        </div>
+        <div class="all-main-links">
+            <div class="links-container-1">
+                <h1>Choose Your Gear</h1>
+                <a href="#" id="changeImageLink-1">Mens Home Long Sleeve</a>
+                <a href="#" id="changeImageLink-2">Mens adidas Pants 24/25</a>
+                <a href="#" id="changeImageLink-3">Mens adidas Shorts 24/25</a>
+                <a href="#" id="changeImageLink-4">Mens adidas Hoodie 24/25</a>
+                <a href="#" id="changeImageLink-5">Mens adidas T-Shirt 24/25</a>
+            </div>
+            <div class="links-container-2">
+                <a href="#" id="changeImageLink-6">Mens UCL Champions polo</a>
+                <a href="#" id="changeImageLink-7">Mens adidas Shorts 24/25</a>
+                <a href="#" id="changeImageLink-8">adidas Mens A por La 15</a>
+                <a href="#" id="changeImageLink-9">adidas Champions 15 cap</a>
+                <a href="#" id="changeImageLink-10">Mens Home Long Sleeve</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 5: Promo -->
+    <div class="section-5">
+        <div class="section-5-container">
+            <div class="section-5-advert">
+                <img src="team-images/vinicius.webp" alt="Vinicius Jr" height="450px">
+                <h2>Become Premium and join the Footivso Community</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-container">
+            <div class="all-footer-links">
+                <div class="footer-left-links">
+                    <div class="footer-link-1">
+                        <h1>Shop</h1>
+                        <a href="#"><h2>How To Order</h2></a>
+                        <a href="#"><h2>Shipping & Returns</h2></a>
+                        <a href="#"><h2>Track my Order</h2></a>
+                        <a href="#"><h2>My Account</h2></a>
+                        <a href="#"><h2>Shop Locator</h2></a>
+                    </div>
+                    <div class="footer-link-2">
+                        <h1>About</h1>
+                        <a href="#"><h2>Privacy Policy</h2></a>
+                        <a href="#"><h2>Cookie Policy</h2></a>
+                        <a href="#"><h2>Terms & Conditions</h2></a>
+                    </div>
+                    <div class="footer-link-3">
+                        <h1>Do You Need Help?</h1>
+                        <a href="#"><h2>Contact Us</h2></a>
+                        <a href="#"><h2>FAQS</h2></a>
+                    </div>
+                </div>
+                <div class="footer-right-links">
+                    <div class="footer-link-4">
+                        <h1>Become a Footivso Member</h1>
+                        <h1>Sign up and receive 5% off your first purchase</h1>
+                        <button><h2>Sign up now</h2></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-middle-links">
+                <div class="footer-download-link"><h1>Download the app now</h1></div>
+                <div class="footer-icon-links">
+                    <img src="team-images/apple-logo.svg" alt="App Store">
+                    <img src="team-images/play.svg" alt="Google Play">
+                    <img src="team-images/Huawei-icon.webp" alt="Huawei">
+                </div>
+            </div>
+            <div class="payments-links">
+                <h2>Payments Accepted</h2>
+                <div class="footer-all-smalls-icons">
+                    <img src="team-images/amex-first-icon.svg" alt="Amex">
+                    <img src="team-images/applePay-second-icon.svg" alt="Apple Pay">
+                    <img src="team-images/dinersClub-third-icon.svg" alt="Diners Club">
+                    <img src="team-images/discover-fourth-icon.svg" alt="Discover">
+                    <img src="team-images/googlePay.5-icon.svg" alt="Google Pay">
+                    <img src="team-images/maestro-6-ic0n.svg" alt="Maestro">
+                    <img src="team-images/mastercard-7-icon.svg" alt="Mastercard">
+                    <img src="team-images/unionPay-8-icon.svg" alt="UnionPay">
+                    <img src="team-images/visa-9-icon.svg" alt="Visa">
+                </div>
+            </div>
+            <div class="footer-social-media-links">
+                <div class="social-media-left-links">
+                    <img src="team-images/footivso (3).png" alt="Footivso logo" height="70px">
+                </div>
+                <div class="social-media-right-links">
+                    <a href="#"><img src="team-images/X-icon.svg" alt="X"></a>
+                    <a href="#"><img src="team-images/Facebook-icon.svg" alt="Facebook"></a>
+                    <a href="#"><img src="team-images/instagram-icon.svg" alt="Instagram"></a>
+                    <a href="#"><img src="team-images/snap-icon.svg" alt="Snapchat"></a>
+                    <a href="#"><img src="team-images/tiktok-icon.svg" alt="TikTok"></a>
+                    <a href="#"><img src="team-images/youtube-icon.svg" alt="YouTube"></a>
+                    <a href="#"><img src="team-images/twich-icon.svg" alt="Twitch"></a>
+                </div>
+            </div>
+            <div class="footer-last-word">
+                <h2>FOOTIVSO Shop © 2024 All Rights Reserved</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- ALL SCRIPTS: scroll buttons + image changer (fixed paths & 10 images) -->
+    <script>
+        // ========== SECTION 2 SCROLL (trending) ==========
+        const leftBtn = document.getElementById('scroll-left');
+        const rightBtn = document.getElementById('scroll-right');
+        const productContainer = document.querySelector('.product-container');
+        if (leftBtn && productContainer) {
+            leftBtn.addEventListener('click', () => {
+                productContainer.scrollBy({ left: -1200, behavior: 'smooth' });
+            });
+            rightBtn.addEventListener('click', () => {
+                productContainer.scrollBy({ left: 1200, behavior: 'smooth' });
+            });
+        }
+
+        // ========== SECTION 3 SCROLL (DNA) ==========
+        const leftBtnDna = document.getElementById('scroll-left-1');
+        const rightBtnDna = document.getElementById('scroll-right-1');
+        const productContainerDna = document.querySelector('.product-container-2');
+        if (leftBtnDna && productContainerDna) {
+            leftBtnDna.addEventListener('click', () => {
+                productContainerDna.scrollBy({ left: -1200, behavior: 'smooth' });
+            });
+            rightBtnDna.addEventListener('click', () => {
+                productContainerDna.scrollBy({ left: 1200, behavior: 'smooth' });
+            });
+        }
+
+        // ========== SECTION 4: IMAGE CHANGER (ALL 10 LINKS, CLEAN RELATIVE PATHS) ==========
+        const mainImage = document.getElementById('mainImage');
+        // image array: exactly 10 images matching links 1-10 order (ensured correct filenames from your assets)
+        const imageGalleryList = [
+            'team-images/DAN-Kit3.webp',      // link 1: Mens Home Long Sleeve
+            'team-images/DAN-Kit2.webp',      // link 2: Mens adidas Pants 24/25
+            'team-images/DAN-Kit4.webp',      // link 3: Mens adidas Shorts 24/25
+            'team-images/DAN-Kit5.webp',      // link 4: Mens adidas Hoodie 24/25
+            'team-images/DAN-Kit9.webp',      // link 5: Mens adidas T-Shirt 24/25
+            'team-images/DAN-Kit8.webp',      // link 6: Mens UCL Champions polo
+            'team-images/madrid-short.webp',  // link 7: Mens adidas Shorts 24/25 (variant)
+            'team-images/echarpe.webp',       // link 8: adidas Mens A por La 15
+            'team-images/DAN-Kit10.webp',     // link 9: adidas Champions 15 cap
+            'team-images/echarper-2.webp'     // link 10: Mens Home Long Sleeve (extra style)
+        ];
+
+        // helper to change image
+        function changeMainImage(newPath) {
+            if (mainImage) {
+                mainImage.src = newPath;
+            }
+        }
+
+        // attach event listeners for all 10 links dynamically
+        for (let i = 1; i <= 10; i++) {
+            const linkElement = document.getElementById(`changeImageLink-${i}`);
+            if (linkElement) {
+                linkElement.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    // use array index (i-1) to map correct image
+                    if (imageGalleryList[i-1]) {
+                        changeMainImage(imageGalleryList[i-1]);
+                    } else {
+                        console.warn(`Image missing for link ${i}`);
+                    }
+                });
+            }
+        }
+
+        // Optional: fallback for any missing id, ensure DOM ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // set initial image if needed
+            if (mainImage && !mainImage.src.includes('DAN-Kit6')) {
+                mainImage.src = 'team-images/DAN-Kit6.webp';
+            }
+            // double-check all 10 links have events (just in case)
+            for (let i = 1; i <= 10; i++) {
+                const link = document.getElementById(`changeImageLink-${i}`);
+                if (link && !link.hasAttribute('data-listener')) {
+                    link.setAttribute('data-listener', 'true');
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        if (imageGalleryList[i-1]) changeMainImage(imageGalleryList[i-1]);
+                    });
+                }
+            }
+        });
+    </script>
 </body>
 </html>
