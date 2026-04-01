@@ -347,6 +347,29 @@
                 }
             }
         });
+        // Add this after your image changer code to debug
+for (let i = 1; i <= 10; i++) {
+    const link = document.getElementById(`changeImageLink-${i}`);
+    if (link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const imgPath = imageGalleryList[i-1];
+            console.log(`Attempting to load: ${imgPath}`);
+            
+            // Test if image exists
+            const testImg = new Image();
+            testImg.onload = function() {
+                console.log(`✓ Image loaded: ${imgPath}`);
+                mainImage.src = imgPath;
+            };
+            testImg.onerror = function() {
+                console.error(`✗ Image NOT FOUND: ${imgPath}`);
+                alert(`Image not found: ${imgPath}\nCheck the filename in team-images folder`);
+            };
+            testImg.src = imgPath;
+        });
+    }
+}
     </script>
 </body>
 </html>
