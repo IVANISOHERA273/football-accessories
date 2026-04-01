@@ -1,0 +1,133 @@
+<!-- .............................................dashboard..................................... -->
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+            const token = localStorage.getItem('token');
+            if (!token) {
+                
+                return;
+            }
+
+            try {
+                // Fetch user info
+                const userResponse = await fetch('http://localhost:5600/dashboard/me', {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                if (userResponse.ok) {
+                    const user = await userResponse.json();
+                    document.getElementById('userInfo').innerHTML = `
+                        <p><strong>Name:</strong> ${user.name}</p>
+                        <p><strong>Email:</strong> ${user.email}</p>
+                        <p><strong>Phone:</strong> ${user.phone}</p>
+                    `;
+                } else {
+                    throw new Error('Failed to fetch user info');
+                }
+
+                // Fetch cart items
+                const cartResponse = await fetch('http://localhost:5600/cart', {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                if (cartResponse.ok) {
+                    const cartItems = await cartResponse.json();
+                    const cartItemsDiv = document.getElementById('cartItems');
+                    cartItemsDiv.innerHTML = '';
+                    cartItems.forEach(item => {
+                        cartItemsDiv.innerHTML += `
+                            <div class="cart-item">
+                                <span>${item.name}</span>
+                                <span>${item.price} USD</span>
+                            </div>
+                        `;
+                    });
+                } else {
+                    throw new Error('Failed to fetch cart items');
+                }
+            } catch (error) {
+                console.error(error);
+                alert('An error occurred while fetching data. Please try again.');
+                localStorage.removeItem('token');
+                window.location.href = 'login.html';
+            }
+        });
+</script>
+<style>
+    
+    body {
+            font-family: Arial, sans-serif;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+          margin: 0;
+          }
+</style>
+<button id="scroll-left"><span class="material-symbols-outlined">arrow_back</span></button>
+    <div class="product-container">
+        <div class="products">
+            <div class="product-section-5-1"><a href="addtocard.html"><img src="./team-images/products/boot-1.webp" alt="" height="420px"></a><a href="#"><h1>PUMA Ultra 5 x Senna</h1></a><h2>Ksh.18,000</h2></div>
+            <div class="product-seection-5-2"><a href="#"><img src="./team-images/products/boot-2.avif" alt="" height="420px"></a><a href="#"><h1>Mens Home Long Sleeve 24/25</h1></a><h2>Ksh.20,000</h2></div>
+            <div class="product-seection-5-3"><a href="#"><img src="./team-images/products/boot-3.jpg" alt="" height="420px"></a><a href="#"><h1>Youth Home Kit 24/25 White</h1></a><h2>Ksh.15,000</h2></div>
+            <div class="product-seection-5-4"><a href="#"><img src="./team-images/products/boot-4.avif" alt="" height="420px"></a><a href="#"><h1>Mens Home Authentic Shorts</h1></a><h2>Ksh.8,000</h2></div>
+            <div class="product-seection-5-5"><a href="#"><img src="./team-images/products/boot-5.avif" alt="" height="420px"></a><a href="#"><h1>Youth Home Shorts 24/25</h1></a><h2>Ksh.9,000</h2></div>
+            <div class="product-seection-5-6"><a href="#"><img src="./team-images/products/booy-6.jpg" alt="" height="420px"></a><a href="#"><h1>Youth Home Shorts 24/25</h1></a><h2>Ksh.9,000</h2></div>
+        </div>
+        </div>
+    </div>
+    <div class="section-5-link-1">
+                <img src="./team-images/products/boot-1.webp" alt="" height="420px">
+                <h1>PUMA Ultra 5 x Senna</h1>
+                <h2>A tribute to a Formula 1 legend</h2>
+            </div>
+            <div class="section-5-link-2">
+                <img src="./team-images/products/boot-2.avif" alt="" height="420px">
+                <h1>PUMA Ultra 5 x Senna</h1>
+                <h2>A tribute to a Formula 1 legend</h2>
+            </div>
+            <div class="section-5-link-3">
+                <img src="./team-images/products/boot-3.jpg" alt="" height="420px">
+                <h1>PUMA Ultra 5 x Senna</h1>
+                <h2>A tribute to a Formula 1 legend</h2>
+            </div>
+            <div class="section-5-link-4">
+                <img src="./team-images/products/boot-4.avif" alt="" height="420px">
+                <h1>PUMA Ultra 5 x Senna</h1>
+                <h2>A tribute to a Formula 1 legend</h2>
+            </div>
+            <div class="section-5-link-5">
+                <img src="./team-images/products/boot-5.avif" alt="" height="420px">
+                <h1>PUMA Ultra 5 x Senna</h1>
+                <h2>A tribute to a Formula 1 legend</h2>
+            </div>
+            <div class="section-5-link-5">
+                <img src="./team-images/products/booy-6.jpg" alt="" height="420px">
+                <h1>PUMA Ultra 5 x Senna</h1>
+                <h2>A tribute to a Formula 1 legend</h2>
+            </div>
